@@ -16,7 +16,7 @@
 		:root {
 			--bg-color: #FFFFFF;
 			--font-color: #454545;
-			--font-size: 1.6rem;
+			--font-size: 1.4rem;
 			--color-primary: #46aae8;
 			--font-family-sans: 'Merriweather', serif;
 		}
@@ -26,20 +26,13 @@
 			margin-bottom: 8%;
 		}
 		.main h1 {
-			font-size: 2.6em;
+			font-size: 3.0rem;
+		}
+		#bio {
+			margin-top: 1rem;
 		}
 		#bio a {
 			text-decoration: underline;
-		}
-		.subsection p {
-			font-size: 1.6rem;
-		}
-		#af2s {
-			font-size: 1.4rem;
-		}
-		#showLink{
-			font-size: 1.2rem;
-			cursor: pointer;
 		}
 		#mobileportrait{
 			display:none;
@@ -83,9 +76,15 @@
 		#portraitcol {
 			margin-right: 3.5rem;
 		}
-		#portrait {
+		.portrait {
 			border-radius: 5px;
 			margin-top: 1em;
+		}
+		#portraitcol img {
+			width: 80%;
+		}
+		#mobileportrait img {
+			width: 40%;
 		}
 		#hicontainer h1 {
 			margin-bottom:0em;
@@ -124,12 +123,12 @@
 		<section id="bio">
 			<div class='row'>
 				<div id='portraitcol' class='col-3 is-vertical-align is-horizontal-align'>
-					<img id='portrait' src='self.webp' alt='Portrait image'>
+					<img class='portrait' src='self.webp' alt='Portrait image'>
 				</div>
 				<div class='col'>
 					<div id='mobileportrait' class='row'>
 						<div class='col is-horizontal-align'>
-							<img id='portrait' src='self.webp' width='40%' alt='Portrait image'>
+							<img class='portrait' src='self.webp' alt='Portrait image'>
 						</div>
 					</div>
 					<div id='hicontainer'>
