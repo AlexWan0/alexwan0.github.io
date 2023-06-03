@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alexander Wan - Home</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+
+	<style>
+		:root {
+			--bg-color: #FFFFFF;
+			--font-color: #454545;
+			--font-size: 1.6rem;
+			--color-primary: #5aa3d1;
+			--font-family-sans: 'Merriweather', serif;
+		}
+		.main {
+			width: 60%;
+			margin-top: 2%;
+			margin-bottom: 8%;
+		}
+		.main h1 {
+			font-size: 2.6em;
+		}
+		#bio a {
+			text-decoration: underline;
+		}
+		.subsection p {
+			font-size: 1.6rem;
+		}
+		#af2s {
+			font-size: 1.4rem;
+		}
+		#showLink{
+			font-size: 1.2rem;
+			cursor: pointer;
+		}
+		#mobileportrait{
+			display:none;
+			margin-bottom: 2em;
+		}
+		@media only screen and (max-width: 1000px) {
+			.main {
+				width: 90%;
+				margin-top: 5%;
+			}
+			#portraitcol {
+				margin-right: 0rem;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			.main {
+				width: 80%;
+				margin-top: 10%;
+			}
+			#portraitcol {
+				display:none;
+			}
+			#mobileportrait{
+				display:block;
+			}
+		}
+		#publications p {
+			margin-bottom: 0;
+		}
+		.paper {
+			margin-bottom: 1.5rem;
+		}
+		#mainsep {
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+		}
+		#portraitcol {
+			margin-right: 3.5rem;
+		}
+		#portrait {
+			border-radius: 5px;
+			margin-top: 1em;
+		}
+		#hicontainer h1 {
+			margin-bottom:0em;
+		}
+		.nav a {
+			color: #6F6F6F;
+		}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Source: https://stackoverflow.com/a/7717572
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			    anchor.addEventListener('click', function (e) {
+			        e.preventDefault();
+
+			        document.querySelector(this.getAttribute('href')).scrollIntoView({
+			            behavior: 'smooth'
+			        });
+			    });
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container main">
+		<nav class="nav">
+			<div class="nav-right">
+				<a href="#publications"><i>Publications</i></a>
+				<a href="#contact"><i>Contact</i></a>
+				<!--
+					<a href="#">CV</a>
+				-->
+			</div>
+		</nav>
+		<section id="bio">
+			<div class='row'>
+				<div id='portraitcol' class='col-3 is-vertical-align is-horizontal-align'>
+					<img id='portrait' src='self.jpeg'>
+				</div>
+				<div class='col'>
+					<div class='row'>
+						<div class='col' id='hicontainer'>
+							<h1>Hi! 👋</h1>
+						</div>
+						<div id='mobileportrait' class='col is-horizontal-align'>
+							<img id='portrait' src='self.jpeg' width='40%'>
+						</div>
+					</div>
+					<p>
+						I'm Alexander Wan, a third-year undergraduate at UC Berkeley, studying Computer Science and Statistics. I'm broadly interested in <b>Machine Learning and NLP, particularly in improving the robustness and interpretability of large language models</b>. I work closely with folks at the <a href='https://nlp.cs.berkeley.edu/'>Berkeley NLP Group</a> and the <a href='https://hlr.github.io/'>MSU Heterogeneous Learning and Reasoning lab</a>.
+					</p>
+					<p>
+						See my: <a href="https://www.linkedin.com/in/alexander-w-60112b1b5/">LinkedIn</a> / <a href="https://github.com/alexwan0">Github</a> / <a href="https://scholar.google.com/citations?user=iSkfiKIAAAAJ">Google Scholar</a> / <a href="https://twitter.com/alexwan55">Twitter</a>
+					</p>
+				</div>
+			</div>
+			<!--<div class="row">
+				<img class='col-1' src='github-mark.svg'>
+				<img class='col-1' src='linkedin.svg'>
+				<img class='col-1' src='scholar.svg'>
+			</div>-->
+		</section>
+		<hr id="mainsep">
+		<section id="publications">
+			<h3>Publications</h3>
+			<div class="paper">
+				<p>
+					<b>Poisoning Language Models During Instruction Tuning</b>
+				</p>
+				<p>
+					<u>Alexander Wan</u>*, Eric Wallace*, Sheng Shen, Dan Klein
+				</p>
+				<p>
+					<i>ICML 2023</i>
+				</p>
+				<p>
+					<a href="https://arxiv.org/abs/2305.00944">arXiv</a>
+				</p>
+			</div>
+
+			<div class="paper">
+				<p>
+					<b>GLUECons: A Generic Benchmark for Learning Under Constraints</b>
+				</p>
+				<p>
+					Hossein Rajaby Faghihi, Aliakbar Nafar, Chen Zheng, Roshanak Mirzaee, Yue Zhang, Andrzej Uszok, <u>Alexander Wan</u>, Tanawan Premsri, Dan Roth, Parisa Kordjamshidi
+				</p>
+				<p>
+					<i>AAAI 2023</i>
+				</p>
+				<p>
+					<a href="https://arxiv.org/abs/2302.10914">arXiv</a>
+				</p>
+			</div>
+
+		</section>
+		<hr id="mainsep">
+		<section id="contact" class="subsection">
+			<h3>Contact</h3>
+			<p>Email: <code id="af2s">first 4 letters of first name + last name [at] berkeley [dot] edu</code></p>
+		</section>
+	</div>
+</body>
+</html>
