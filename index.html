@@ -45,6 +45,9 @@
 			display:none;
 			margin-bottom: 2em;
 		}
+		#topsep {
+			display: none;
+		}
 		@media only screen and (max-width: 1000px) {
 			.main {
 				width: 90%;
@@ -61,10 +64,13 @@
 				margin-top: 10%;
 			}
 			#portraitcol {
-				display:none;
+				display: none;
 			}
-			#mobileportrait{
-				display:block;
+			#mobileportrait {
+				display: block;
+			}
+			#topsep {
+				display: block;
 			}
 		}
 		#publications p {
@@ -117,6 +123,7 @@
 				-->
 			</div>
 		</nav>
+		<hr id="topsep">
 		<section id="bio">
 			<div class='row'>
 				<div id='portraitcol' class='col-3 is-vertical-align is-horizontal-align'>
