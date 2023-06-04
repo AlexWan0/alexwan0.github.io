@@ -42,33 +42,6 @@
 		#topsep {
 			display: none;
 		}
-		@media only screen and (max-width: 1000px) {
-			.main {
-				width: 90%;
-				margin-top: 5%;
-			}
-			#portraitcol {
-				margin-right: 1rem;
-			}
-		}
-
-		@media only screen and (max-width: 600px) {
-			#portraitcol {
-				display: none;
-			}
-			#mobileportrait {
-				display: block;
-			}
-			#topsep {
-				display: block;
-			}
-		}
-		#publications p {
-			margin-bottom: 0;
-		}
-		.paper {
-			margin-bottom: 1.5rem;
-		}
 		#mainsep {
 			margin-top: 5rem;
 			margin-bottom: 5rem;
@@ -95,6 +68,74 @@
 		}
 		#biocol {
 			margin-right: 2rem;
+		}
+
+		/* Paper */
+		#publications h3 {
+			margin-bottom: 2rem;
+		}
+		#publications p {
+			margin-bottom: 0;
+		}
+		.paper {
+			margin-bottom: 1.5rem;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		#publications_content {
+			margin-left: 1rem;
+			margin-right: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		/* Paper thumbnail */
+		.paper_thumbnail {
+			margin: 0;
+		}
+		.paper_thumbnail img {
+			width: 95px;
+			height: 95px;
+			border-radius: 5px;
+			object-fit: cover;
+			border: 1px solid #9e9e9e;
+
+			margin-left: 2rem;
+			margin-right: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		/* Mobile settings */
+		@media only screen and (max-width: 1000px) {
+			.main {
+				width: 90%;
+				margin-top: 5%;
+			}
+			#portraitcol {
+				margin-right: 1rem;
+			}
+			.paper_thumbnail img {
+				height: 12vw;
+				width: 12vw;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			#portraitcol {
+				display: none;
+			}
+			#mobileportrait {
+				display: block;
+			}
+			#topsep {
+				display: block;
+			}
+			.paper_thumbnail {
+				display: none;
+			}
+			#publications_content {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 	</style>
 	<script>
@@ -155,34 +196,44 @@
 		<hr id="mainsep">
 		<section id="publications">
 			<h3>Publications</h3>
-			<div class="paper">
-				<p>
-					<b>Poisoning Language Models During Instruction Tuning</b>
-				</p>
-				<p>
-					<u>Alexander Wan</u>*, Eric Wallace*, Sheng Shen, Dan Klein
-				</p>
-				<p>
-					<i>ICML 2023</i>
-				</p>
-				<p>
-					<a href="https://arxiv.org/abs/2305.00944">arXiv</a>
-				</p>
+			<div id="publications_content" class="row">
+				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
+					<img src="papers/pitm/thumb.png">
+				</div>
+				<div class="paper col-10">
+					<p>
+						<b>Poisoning Language Models During Instruction Tuning</b>
+					</p>
+					<p>
+						<u>Alexander Wan</u>*, Eric Wallace*, Sheng Shen, Dan Klein
+					</p>
+					<p>
+						<i>ICML 2023</i>
+					</p>
+					<p>
+						<a href="https://arxiv.org/abs/2305.00944">arXiv</a>
+					</p>
+				</div>
 			</div>
 
-			<div class="paper">
-				<p>
-					<b>GLUECons: A Generic Benchmark for Learning Under Constraints</b>
-				</p>
-				<p>
-					Hossein Rajaby Faghihi, Aliakbar Nafar, Chen Zheng, Roshanak Mirzaee, Yue Zhang, Andrzej Uszok, <u>Alexander Wan</u>, Tanawan Premsri, Dan Roth, Parisa Kordjamshidi
-				</p>
-				<p>
-					<i>AAAI 2023</i>
-				</p>
-				<p>
-					<a href="https://arxiv.org/abs/2302.10914">arXiv</a>
-				</p>
+			<div id="publications_content" class="row">
+				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
+					<img src="papers/gluecons/thumb.png">
+				</div>
+				<div class="paper col-10">
+					<p>
+						<b>GLUECons: A Generic Benchmark for Learning Under Constraints</b>
+					</p>
+					<p>
+						Hossein Rajaby Faghihi, Aliakbar Nafar, Chen Zheng, Roshanak Mirzaee, Yue Zhang, Andrzej Uszok, <u>Alexander Wan</u>, Tanawan Premsri, Dan Roth, Parisa Kordjamshidi
+					</p>
+					<p>
+						<i>AAAI 2023</i>
+					</p>
+					<p>
+						<a href="https://arxiv.org/abs/2302.10914">arXiv</a>
+					</p>
+				</div>
 			</div>
 
 		</section>
