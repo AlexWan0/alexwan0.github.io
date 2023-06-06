@@ -71,8 +71,44 @@
 			object-fit: cover;
 			border-radius: 10px;
 		}
+
+		/* Bio hi */
+		.noselect {
+			/* https://stackoverflow.com/a/4407335 */
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+			-moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+			                      supported by Chrome, Edge, Opera and Firefox */
+		}
 		#hicontainer h1 {
 			margin-bottom: 0em;
+		}
+		#hand {
+			display: inline-block;
+			transform-origin: bottom right;
+		}
+		#hand:hover{
+			animation: wave 0.5s 2;
+		}
+
+		@keyframes wave {
+			0% {
+				rotate: 0deg;
+				-webkit-transform: rotate(0deg);
+			}
+
+			50% {
+				rotate: 10deg;
+				-webkit-transform: rotate(10deg);
+			}
+
+			100% {
+				rotate: 0deg;
+				-webkit-transform: rotate(0deg);
+			}
 		}
 
 		/* Nav bar */
@@ -205,7 +241,7 @@
 						</div>
 					</div>
 					<div id='hicontainer'>
-						<h1>Hi! 👋</h1>
+						<h1>Hi! <span id='hand' class='noselect'>👋</span></h1>
 					</div>
 					<p>
 						I'm Alexander Wan, a third-year undergraduate at UC Berkeley, studying Computer Science and Statistics. I'm broadly interested in <b>Machine Learning and NLP, particularly in improving the robustness and interpretability of large language models</b>. I work closely with folks at the <a href='https://nlp.cs.berkeley.edu/'>Berkeley NLP Group</a> and the <a href='https://hlr.github.io/'>MSU Heterogeneous Learning and Reasoning lab</a>.
