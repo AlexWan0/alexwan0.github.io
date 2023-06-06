@@ -75,6 +75,21 @@
 			margin-bottom: 0em;
 		}
 
+		/* Social Buttons */
+		.social_container {
+			
+		}
+
+		.social_container img {
+			/* Convert SVG to grey, courtesy of: https://stackoverflow.com/a/53336754 */
+			filter: brightness(0) saturate(100%) invert(23%) sepia(3%) saturate(352%) hue-rotate(335deg) brightness(106%) contrast(86%);
+			opacity: 0.65;
+		}
+
+		#social_row {
+			width: 30%;
+		}
+
 		/* Nav bar */
 		#topsep {
 			display: none;
@@ -210,9 +225,23 @@
 					<p>
 						I'm Alexander Wan, a third-year undergraduate at UC Berkeley, studying Computer Science and Statistics. I'm broadly interested in <b>Machine Learning and NLP, particularly in improving the robustness and interpretability of large language models</b>. I work closely with folks at the <a href='https://nlp.cs.berkeley.edu/'>Berkeley NLP Group</a> and the <a href='https://hlr.github.io/'>MSU Heterogeneous Learning and Reasoning lab</a>.
 					</p>
-					<p>
+					<!--<p>
 						See my: <a href="https://www.linkedin.com/in/alexander-w-60112b1b5/">LinkedIn</a> / <a href="https://github.com/alexwan0">Github</a> / <a href="https://scholar.google.com/citations?user=iSkfiKIAAAAJ">Google Scholar</a> / <a href="https://twitter.com/alexwan55">Twitter</a>
-					</p>
+					</p>-->
+					<div id='social_row' class='row'>
+						<div class='col is-vertical-align social_container'>
+							<a href='#'><img src='social/github.svg'></a>
+						</div>
+						<div class='col is-vertical-align social_container'>
+							<a href='#'><img src='social/linkedin.svg'></a>
+						</div>
+						<div class='col is-vertical-align social_container'>
+							<a href='#'><img src='social/scholar.svg'></a>
+						</div>
+						<div class='col is-vertical-align social_container'>
+							<a href='#'><img src='social/twitter.svg'></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--<div class="row">
