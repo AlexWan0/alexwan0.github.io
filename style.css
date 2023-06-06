@@ -75,7 +75,8 @@
 	transform-origin: bottom right;
 }
 #hand:hover{
-	animation: wave 0.5s 2;
+	animation: wave 0.40s 2;
+	animation-timing-function: ease-in-out;
 }
 
 @keyframes wave {
@@ -86,7 +87,7 @@
 
 	50% {
 		rotate: 10deg;
-		-webkit-transform: rotate(10deg);
+		-webkit-transform: rotate(5deg);
 	}
 
 	100% {
