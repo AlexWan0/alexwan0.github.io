@@ -1,9 +1,9 @@
 :root {
 	--bg-color: #FFFFFF;
 	--font-color: #454545;
-	--font-size: 1.4rem;
+	--font-size: 1.5rem;
 	--color-primary: #46aae8;
-	--font-family-sans: 'Merriweather', serif;
+	--font-family-sans: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 }
 
 /* All */
