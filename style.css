@@ -182,7 +182,11 @@
 
 /* Other */
 .other-body {
-	margin-left: 2rem;
+	margin-left: 0rem;
+}
+
+.other-body li {
+  margin: 10px 0;
 }
 
 /* Contact */
@@ -233,7 +237,7 @@
 		margin-right: 0;
 	}
 
-	/* Other body */
+	/* Other */
 	.other-body {
 		margin-left: 0;
 	}
