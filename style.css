@@ -242,6 +242,10 @@
 		margin-left: 0;
 	}
 
+	.other ul {
+		padding-left: 2rem;
+	}
+
 	/* Contact */
 	#contact {
 		padding-bottom: 3rem;
