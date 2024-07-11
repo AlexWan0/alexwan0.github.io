@@ -31,6 +31,7 @@
 	--font-size: 1.4rem;
 	--color-primary: #1799eb;
 	/* https://github.com/system-fonts/modern-font-stacks */
+	/*	--font-family-sans: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;*/
 	/* --font-family-sans: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif; */
 	--font-family-sans: 'Merriweather';
 }
@@ -240,10 +241,15 @@
 	/* Other */
 	.other-body {
 		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.other ul {
-		padding-left: 2rem;
+		padding-left: 1.5rem;
+	}
+
+	.other p {
+		font-size: 1.35rem;
 	}
 
 	/* Contact */
@@ -259,4 +265,7 @@
 		margin-left: 0;
 	}
 
+	.contact-body p {
+		font-size: 1.35rem;
+	}
 }
