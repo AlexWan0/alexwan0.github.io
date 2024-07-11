@@ -223,6 +223,10 @@
 	#mobileportrait {
 		display: block;
 	}
+	#biocol {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
 
 	/* Nav */
 	#topsep {
