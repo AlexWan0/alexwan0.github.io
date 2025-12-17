@@ -136,10 +136,10 @@
 }
 
 /* Paper */
-#publications h3 {
+.publications h3 {
 	margin-bottom: 2rem;
 }
-#publications p {
+.publications p {
 	margin-bottom: 0;
 }
 .paper {
