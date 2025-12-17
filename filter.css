@@ -1,0 +1,22 @@
+.pub-filters {
+	margin: 0.25rem 0 2rem 0;
+	font-size: 1.2rem;
+}
+
+.pub-filter {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.pub-filter.is-active {
+	text-decoration: none;
+    color: #848484;
+}
+
+.pub-filter-sep {
+	margin: 0 0.35rem;
+}
+
+.pub-filter-label {
+    margin-right: 0.5rem;
+}

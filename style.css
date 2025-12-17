@@ -136,8 +136,8 @@
 }
 
 /* Paper */
-.publications h3 {
-	margin-bottom: 2rem;
+#publications h3 {
+	margin-bottom: 1rem;
 }
 .publications p {
 	margin-bottom: 0;
@@ -167,6 +167,11 @@
 	margin-left: 2rem;
 	margin-right: 2rem;
 	margin-bottom: 1rem;
+}
+
+/* Projects */
+#projects h3 {
+	margin-bottom: 2rem;
 }
 
 /* News */

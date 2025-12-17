@@ -19,21 +19,32 @@
 
 	<link rel="stylesheet" href="https://unpkg.com/chota@latest">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="filter.css">
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			// Source: https://stackoverflow.com/a/7717572
+			// Adapted from: https://stackoverflow.com/a/7717572
 			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			    anchor.addEventListener('click', function (e) {
-			        e.preventDefault();
+				anchor.addEventListener("click", function (e) {
+					const href = this.getAttribute("href");
 
-			        document.querySelector(this.getAttribute('href')).scrollIntoView({
-			            behavior: 'smooth'
-			        });
-			    });
+					if (href === "#") {
+						e.preventDefault();
+						return;
+					}
+
+					if (!href || !href.startsWith("#") || href.length < 2) return;
+
+					const target = document.querySelector(href);
+					if (!target) return;
+
+					e.preventDefault();
+					target.scrollIntoView({ behavior: "smooth" });
+				});
 			});
 		});
 	</script>
+	<script src="filter.js"></script>
 </head>
 <body>
 	<div class="container main">
@@ -107,7 +118,15 @@
 
 		<section id="publications" class="publications">
 			<h3>Publications</h3>
-			<div id="publications_content" class="row is-vertical-align">
+			<nav class="pub-filters" aria-label="Filter publications">
+				<b class="pub-filter-label">Filter by: </b>
+				<a href="#" class="pub-filter is-active" data-filter="all" aria-pressed="true">All</a>
+				<span class="pub-filter-sep">/</span>
+				<a href="#" class="pub-filter" data-filter="cat-ml" aria-pressed="false">Machine Learning</a>
+				<span class="pub-filter-sep">/</span>
+				<a href="#" class="pub-filter" data-filter="cat-policy" aria-pressed="false">Public Policy</a>
+			</nav>
+			<div id="publications_content" class="row is-vertical-align cat-policy categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://crfm.stanford.edu/fmti/December-2025/index.html" target="_blank">
 						<img src="papers/fmti/thumb.webp" alt="The 2025 Foundation Model Transparency Index">
@@ -129,7 +148,7 @@
 				</div>
 			</div>
 
-			<div id="publications_content" class="row is-vertical-align">
+			<div id="publications_content" class="row is-vertical-align cat-policy categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://www.cafrontieraigov.org/" target="_blank">
 						<img src="papers/california/thumb.webp" alt="Small paper thumbnail: The California Report on Frontier AI Policy">
@@ -151,7 +170,7 @@
 				</div>
 			</div>
 
-			<div id="publications_content" class="row is-vertical-align">
+			<div id="publications_content" class="row is-vertical-align cat-policy categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://hai.stanford.edu/policy/response-to-us-ai-safety-institutes-request-for-comment-on-managing-misuse-risk-for-dual-use-foundation-models" target="_blank">
 						<img src="papers/rfc/thumb.webp" alt="Small paper thumbnail: Stanford Response to the US AI Safety Institute Request for Comment on Misuse of Dual-Use Foundation Models">
@@ -173,7 +192,7 @@
 				</div>
 			</div>
 
-			<div id="publications_content" class="row is-vertical-align">
+			<div id="publications_content" class="row is-vertical-align cat-ml categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://arxiv.org/abs/2402.11782" target="_blank">
 						<img src="papers/evidence/thumb.webp" alt="Small paper thumbnail: What Evidence Do Language Models Find Convincing?">
@@ -195,7 +214,7 @@
 				</div>
 			</div>
 
-			<div id="publications_content" class="row is-vertical-align">
+			<div id="publications_content" class="row is-vertical-align cat-ml categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://arxiv.org/abs/2305.00944" target="_blank">
 						<img src="papers/pitm/thumb.webp" alt="Small paper thumbnail: Poisoning Language Models During Instruction Tuning">
@@ -217,7 +236,7 @@
 				</div>
 			</div>
 
-			<div id="publications_content" class="row is-vertical-align">
+			<div id="publications_content" class="row is-vertical-align cat-ml categorized">
 				<div class="col paper_thumbnail is-horizontal-align is-vertical-align">
 					<a href="https://arxiv.org/abs/2302.10914" target="_blank">
 						<img src="papers/gluecons/thumb.webp" alt="Small paper thumbnail: GLUECons: A Generic Benchmark for Learning Under Constraints">
