@@ -232,6 +232,9 @@
 	#topsep {
 		display: block;
 	}
+	.nav a {
+		padding: 1rem 1.2rem;
+	}
 
 	/* Paper */
 	.paper_thumbnail {
