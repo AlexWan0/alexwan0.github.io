@@ -11,6 +11,7 @@
 .pub-filter.is-active {
 	text-decoration: none;
     color: #848484;
+	pointer-events: none;
 }
 
 .pub-filter-sep {
