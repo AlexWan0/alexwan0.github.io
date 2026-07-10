@@ -1,0 +1,35 @@
+.research_interests {
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 1px dashed currentColor;
+    transition: opacity 0.2s ease;
+}
+
+.research_interests:hover {
+	color: #575757;
+}
+
+.research_interests.fading {
+    opacity: 0;
+}
+
+.ri_popup {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0.6rem 0.8rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    width: 240px;
+}
+
+.ri_popup .ri_date {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+.ri_popup input[type="range"] {
+    width: 100%; margin: 0; padding: 0;
+}
